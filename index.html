@@ -50,7 +50,6 @@
             box-shadow: 0 0 0 2px var(--verde-principal);
         }
 
-        /* Notificação de Prova Social */
         #social-proof-toast {
             position: fixed;
             bottom: 20px;
@@ -79,7 +78,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Notificação de Prova Social -->
     <div id="social-proof-toast">
         <div class="social-proof-card">
             <div class="flex-shrink-0 w-10 h-10 bg-verde-claro rounded-full flex items-center justify-center text-verde-principal">
@@ -92,7 +90,6 @@
         </div>
     </div>
 
-    <!-- Header Centralizado -->
     <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-center items-center">
             <div class="flex items-center space-x-3">
@@ -104,7 +101,6 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="bg-verde-principal text-white py-16 md:py-24">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
@@ -126,8 +122,6 @@
                     <option value="São Paulo - Guarulhos (GRU)">
                     <option value="São Paulo - Congonhas (CGH)">
                     <option value="Campinas - Viracopos (VCP)">
-                    <option value="Rio de Janeiro - Galeão (GIG)">
-                    <option value="Rio de Janeiro - Santos Dumont (SDU)">
                 </datalist>
 
                 <p class="text-xs text-gray-500 mt-3 italic flex items-center">
@@ -140,95 +134,116 @@
         </div>
     </section>
 
-    <!-- Benefícios -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Benefício 1: Somos uma agência -->
                 <div class="p-8 rounded-2xl bg-verde-claro border border-transparent hover:border-verde-principal transition-all text-center">
                     <div class="w-16 h-16 bg-verde-principal rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i class="fas fa-building text-white text-2xl"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-3 text-verde-principal uppercase">Somos uma agência de viagens</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Somos uma agência de viagens com mais de 3 anos de experiência com clientes satisfeitos em todo Brasil.</p>
+                    <h3 class="font-bold text-lg mb-3 text-verde-principal uppercase">Agência de Confiança</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Mais de 3 anos de experiência transformando sonhos em realidade em todo o Brasil.</p>
                 </div>
-                <!-- Benefício 2: Segurança -->
                 <div class="p-8 rounded-2xl bg-verde-claro border border-transparent hover:border-verde-principal transition-all text-center">
                     <div class="w-16 h-16 bg-verde-principal rounded-full flex items-center justify-center mb-6 mx-auto shadow-md">
                         <i class="fas fa-lock text-white text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-3 text-verde-principal uppercase">Grupo 100% Seguro</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Apenas o que interessa: viagens e promoções exclusivas. Sem correntes ou mensagens irritantes.</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Apenas o que interessa: viagens e promoções exclusivas. Sem correntes ou mensagens irrelevantes.</p>
                 </div>
-                <!-- Benefício 3: Gratuito -->
                 <div class="p-8 rounded-2xl bg-verde-claro border border-transparent hover:border-verde-principal transition-all text-center">
                     <div class="w-16 h-16 bg-verde-principal rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i class="fas fa-gift text-white text-2xl"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-3 text-verde-principal uppercase">Grupo Gratuito</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Criamos esse espaço para ajudar nossos clientes a viajarem melhor, com mais economia e segurança.</p>
+                    <h3 class="font-bold text-lg mb-3 text-verde-principal uppercase">Acesso Gratuito</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Criamos esse espaço para garantir que você viaje com mais economia e segurança.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Completo -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-verde-principal">Perguntas Frequentes</h2>
-                <p class="text-azul-institucional font-medium mt-2">Conjunto de Viagens</p>
+                <p class="text-azul-institucional font-medium mt-2">Tire suas dúvidas sobre o Conjunto de Viagens</p>
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ: Quem somos? -->
                 <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
                     <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
-                        <span class="font-bold text-gray-700">Quem somos?</span>
+                        <span class="font-bold text-gray-700">O que é o Grupo VIP da Conjunto de Viagens?</span>
                         <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
                     </div>
                     <div class="faq-content px-5">
-                        <div class="py-5 text-gray-600 border-t border-gray-100 leading-relaxed">
-                            Somos uma agência de viagens com mais de 3 anos de experiência, atuando em todo o Brasil. Trabalhamos com viagens nacionais e internacionais, oferecendo passagens, pacotes e suporte para que nossos clientes viajem com segurança, economia e tranquilidade.
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            É um grupo exclusivo onde você recebe promoções reais de passagens, pacotes, cruzeiros, hotéis, tours e muito mais, sempre com valores abaixo do mercado e oportunidades limitadas.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ 1 -->
                 <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
                     <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
-                        <span class="font-bold text-gray-700">Como funciona o grupo de promoções do Conjunto de Viagens?</span>
+                        <span class="font-bold text-gray-700">O que é a Conjunto de Viagens?</span>
                         <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
                     </div>
                     <div class="faq-content px-5">
-                        <div class="py-5 text-gray-600 border-t border-gray-100 leading-relaxed">
-                            No grupo, você recebe oportunidades reais de viagem selecionadas pela nossa equipe. As promoções são organizadas para facilitar sua escolha e sempre acompanhadas de suporte da nossa agência.
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            Somos uma agência de viagens com mais de 3 anos de experiência. Atuamos em todo o Brasil, com clientes satisfeitos em destinos nacionais e internacionais, dizemos que a riqueza do mundo está ao seu alcance através de nós!
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ 2 -->
                 <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
                     <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
-                        <span class="font-bold text-gray-700">O grupo é realmente gratuito?</span>
+                        <span class="font-bold text-gray-700">O grupo é pago?</span>
                         <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
                     </div>
                     <div class="faq-content px-5">
-                        <div class="py-5 text-gray-600 border-t border-gray-100 leading-relaxed">
-                            Sim, o grupo é totalmente gratuito. Criamos esse espaço para ajudar nossos clientes a viajarem melhor, com mais economia e segurança.
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            Não. O Grupo VIP é 100% gratuito. Você não paga nada para participar e só compra se quiser.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ 3 -->
                 <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
                     <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
-                        <span class="font-bold text-gray-700">Que tipo de promoções eu vou receber?</span>
+                        <span class="font-bold text-gray-700">Posso comprar mesmo morando em qualquer cidade?</span>
                         <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
                     </div>
                     <div class="faq-content px-5">
-                        <div class="py-5 text-gray-600 border-t border-gray-100 leading-relaxed">
-                            Você pode receber ofertas de passagens aéreas, pacotes completos, cruzeiros, passeios e experiências nacionais e internacionais. Tudo cuidadosamente selecionado.
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            Sim! Atendemos clientes de todo o Brasil, com promoções adaptadas para diferentes cidades e aeroportos.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
+                    <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-700">As viagens são confiáveis?</span>
+                        <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-5">
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            Sim. Trabalhamos apenas com operadoras, companhias aéreas e fornecedores reconhecidos e seguros.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
+                    <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-700">Posso falar com um atendente antes de comprar?</span>
+                        <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-5">
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            Claro! Você sempre terá atendimento personalizado para tirar dúvidas antes de decidir.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden cursor-pointer shadow-sm">
+                    <div class="p-5 flex justify-between items-center hover:bg-verde-claro transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-700">As promoções são realmente mais baratas?</span>
+                        <i class="fas fa-chevron-down text-verde-principal transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-5">
+                        <div class="py-5 text-gray-600 border-t border-gray-100">
+                            Sim. As ofertas vêm de negociações diretas com operadoras, companhias aéreas e fornecedores, além de monitoramento constante de tarifas. Quem está no grupo recebe primeiro e paga menos.
                         </div>
                     </div>
                 </div>
@@ -236,20 +251,16 @@
         </div>
     </section>
 
-    <!-- Seleção de Cidades -->
     <section id="selecao-grupos" class="py-20 bg-white text-center">
         <div class="container mx-auto px-6 max-w-2xl">
             <h2 class="text-3xl font-bold text-verde-principal mb-10 uppercase">Escolha sua cidade</h2>
             <div class="bg-gray-50 p-8 rounded-3xl shadow-xl border-2 border-verde-claro">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div class="grid grid-cols-1 gap-4 mb-8">
                     <button onclick="selectCity('brasília', 'https://chat.whatsapp.com/DFwubGTwOoC2L9SXwJeZi2')" class="city-option p-4 rounded-xl border-2 border-gray-200 bg-white font-bold text-gray-700 hover:border-azul-institucional transition-all flex items-center justify-center">
                         <i class="fas fa-map-marker-alt mr-2 text-azul-institucional"></i> Brasília
                     </button>
                     <button onclick="selectCity('são paulo', 'https://chat.whatsapp.com/BwWXawnGJaJ27Yyztb9fSH')" class="city-option p-4 rounded-xl border-2 border-gray-200 bg-white font-bold text-gray-700 hover:border-azul-institucional transition-all flex items-center justify-center">
                         <i class="fas fa-map-marker-alt mr-2 text-azul-institucional"></i> São Paulo
-                    </button>
-                    <button onclick="selectCity('rio de janeiro', 'https://chat.whatsapp.com/J0lDBJ3docT12dAtfgShoJ')" class="city-option p-4 rounded-xl border-2 border-gray-200 bg-white font-bold text-gray-700 hover:border-azul-institucional transition-all flex items-center justify-center">
-                        <i class="fas fa-map-marker-alt mr-2 text-azul-institucional"></i> Rio de Janeiro
                     </button>
                     <button onclick="selectCity('cuiabá', 'https://chat.whatsapp.com/H9ek3vgzNjs1nWtncqhXBo')" class="city-option p-4 rounded-xl border-2 border-gray-200 bg-white font-bold text-gray-700 hover:border-azul-institucional transition-all flex items-center justify-center">
                         <i class="fas fa-map-marker-alt mr-2 text-azul-institucional"></i> Cuiabá e Sinop
@@ -259,12 +270,48 @@
                     <i class="fab fa-whatsapp text-2xl"></i>
                     <span>Entrar no Grupo VIP</span>
                 </button>
-                <p id="selection-hint" class="mt-4 text-sm text-gray-500 italic">Por favor, selecione uma cidade acima.</p>
             </div>
         </div>
     </section>
 
-    <!-- Instagram -->
+    <section class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-verde-principal uppercase">Quem viaja conosco recomenda</h2>
+                <p class="text-azul-institucional font-medium mt-2">Relatos de quem já aproveitou nossas oportunidades</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex flex-col items-center text-center">
+                    <img src="image_028680.jpg" alt="Alana de Almeida" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-verde-claro">
+                    <div class="mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Eu amei a Conjunto de Viagens! Fiz minha primeira viagem internacional para o Chile graças a eles. Além disso, ainda me ajudaram a fazer meu passaporte, que eu nem tinha. Atendimento excelente do começo ao fim."</p>
+                    <p class="font-bold text-verde-principal uppercase text-sm">Alana de Almeida</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex flex-col items-center text-center">
+                    <img src="image_028d8a.jpg" alt="Julia Freitas" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-verde-claro">
+                    <div class="mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Vi o Grupo VIP da Conjunto de Viagens e entrei só para conhecer. Um tempo depois, apareceu um pacote saindo da minha cidade e resolvi conversar com eles. Acabei comprando e foi uma experiência maravilhosa! Durante toda a viagem recebi suporte, atenção e ajuda sempre que precisei. Recomendo muito!"</p>
+                    <p class="font-bold text-verde-principal uppercase text-sm">Julia Freitas</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex flex-col items-center text-center">
+                    <img src="image_028dc7.jpg" alt="Ricardo Mendes" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-verde-claro">
+                    <div class="mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Graças ao Grupo VIP da Conjunto de Viagens, consegui um pacote com ótimo preço para mim e minha família. Foi uma oportunidade que valeu muito a pena."</p>
+                    <p class="font-bold text-verde-principal uppercase text-sm">Ricardo Mendes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-16 bg-verde-claro">
         <div class="container mx-auto px-6 text-center">
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-sm border border-verde-principal/10">
@@ -283,50 +330,20 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="py-12 bg-white text-center text-gray-500 text-xs border-t border-gray-100">
         <div class="container mx-auto px-6">
-            <p>&copy; 2024 Conjunto de Viagens. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Conjunto de Viagens. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script>
-        // Prova Social
-        const nomesFemininos = ["Ana Ribeiro", "Mariana Costa", "Juliana Martins", "Camila Ferreira", "Bruna Azevedo", "Larissa Pacheco", "Renata Oliveira", "Daniela Farias", "Paula Nogueira", "Vanessa Teixeira", "Patrícia Gomes", "Bianca Moreira", "Gabriela Lopes", "Tatiane Rocha", "Natália Barros", "Fernanda Torres", "Priscila Cunha", "Adriana Lima", "Débora Freitas", "Carolina Pinto", "Amanda Silveira", "Flávia Cardoso", "Isabela Tavares", "Letícia Andrade", "Viviane Duarte", "Aline Bastos", "Raquel Menezes", "Beatriz Rangel", "Heloísa Guimarães", "Sofia Brandão", "Luana Peixoto", "Monique Paiva", "Evelyn Pimentel", "Milena Rezende", "Lorena Magalhães", "Jéssica Fonseca", "Thais Amorim", "Ingrid Vasconcelos", "Kátia Montenegro", "Elisa Figueiredo", "Mirela Vitorino", "Joana Pires", "Cíntia Alencar", "Daniela Portela", "Márcia Sampaio", "Tatiana Coelho", "Iris Batista", "Nicole Guedes", "Samara Lins", "Paula Bittencourt"];
-        const nomesMasculinos = ["Lucas Andrade", "Rafael Costa", "Bruno Teixeira", "Felipe Martins", "Diego Moreira", "André Ribeiro", "Guilherme Rocha", "Eduardo Nogueira", "Matheus Pacheco", "Thiago Barros", "Vinícius Freitas", "Daniel Farias", "Leandro Silveira", "Renato Torres", "Caio Tavares", "Pedro Guimarães", "Igor Cunha", "Marcelo Azevedo", "Victor Paiva", "Leonardo Brandão", "Henrique Batista", "Otávio Lopes", "Alan Duarte", "Douglas Rangel", "Samuel Menezes", "Wesley Amorim", "Rodrigo Vasconcelos", "Cristiano Magalhães", "Fábio Montenegro", "Jonathan Pimentel", "Bruno Alencar", "Thiago Portela", "Ricardo Sampaio", "Alex Coelho", "Murilo Vitorino", "Jefferson Pires", "Arthur Figueiredo", "Emerson Guedes", "Paulo Lins", "Rafael Bittencourt", "Sérgio Cardoso", "Júnior Fonseca", "Victor Rezende", "Luan Peixoto", "Marcos Paes", "Tiago Noronha", "Eduardo Pimentel", "Bruno Lacerda", "Allan Monteiro", "Renato Queiroz"];
-        const frases = [
-            "acaba de entrar no nosso grupo VIP de promoções.",
-            "acaba de iniciar um atendimento personalizado.",
-            "entrou no grupo VIP para planejar sua viagem.",
-            "iniciou um atendimento agora com nossa equipe."
-        ];
-
-        let notificationsShown = 0;
-        const maxNotifications = 3;
-
-        function showNotification() {
-            if (notificationsShown >= maxNotifications) return;
-            const todos = [...nomesFemininos, ...nomesMasculinos];
-            const nome = todos[Math.floor(Math.random() * todos.length)];
-            const frase = frases[Math.floor(Math.random() * frases.length)];
-            const toast = document.getElementById('social-proof-toast');
-            document.getElementById('social-proof-text').innerHTML = `<strong>${nome}</strong> ${frase}`;
-            toast.classList.add('show');
-            notificationsShown++;
-            setTimeout(() => {
-                toast.classList.remove('show');
-                if (notificationsShown < maxNotifications) scheduleNext();
-            }, 6000);
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
         }
 
-        function scheduleNext() {
-            const delay = Math.floor(Math.random() * (90000 - 40000 + 1)) + 40000;
-            setTimeout(showNotification, delay);
-        }
-
-        window.onload = () => setTimeout(showNotification, 10000);
-
-        // Seleção de Cidades
         let selectedUrl = "";
         function selectCity(name, url) {
             selectedUrl = url;
@@ -336,19 +353,10 @@
             btn.disabled = false;
             btn.classList.remove('bg-gray-300', 'cursor-not-allowed');
             btn.classList.add('bg-verde-destaque', 'cursor-pointer');
-            document.getElementById('selection-hint').innerHTML = `Você selecionou: <strong>${name.toUpperCase()}</strong>`;
         }
 
         function redirectToGroup() {
             if(selectedUrl) window.open(selectedUrl, '_blank');
-        }
-
-        // Accordion FAQ
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
         }
     </script>
 </body>
