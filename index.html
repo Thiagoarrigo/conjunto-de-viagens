@@ -287,17 +287,17 @@
                     <div class="mb-4 text-yellow-400">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 italic mb-6">"Eu amei a Conjunto de Viagens! Fiz minha primeira viagem internacional para o Chile graças a eles. Além disso, ainda me ajudaram a fazer meu passaporte, que eu nem tinha. Atendimento excelente do começo ao fim."</p>
+                    <p class="text-gray-600 italic mb-6">"Eu amei a Conjunto de Viagens! Fiz minha primeira viagem internacional para o Chile graças a eles. Atendimento excelente do começo ao fim."</p>
                     <p class="font-bold text-verde-principal uppercase text-sm">Alana de Almeida</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex flex-col items-center text-center">
-                    <img src="image_028d8a.jpg" alt="Julia Freitas" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-verde-claro">
+                    <img src="image_028d8a.jpg" alt="Jessica Reis" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-verde-claro">
                     <div class="mb-4 text-yellow-400">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-gray-600 italic mb-6">"Vi o Grupo VIP da Conjunto de Viagens e entrei só para conhecer. Um tempo depois, apareceu um pacote saindo da minha cidade e resolvi conversar com eles. Acabei comprando e foi uma experiência maravilhosa! Durante toda a viagem recebi suporte, atenção e ajuda sempre que precisei. Recomendo muito!"</p>
-                    <p class="font-bold text-verde-principal uppercase text-sm">Julia Freitas</p>
+                    <p class="font-bold text-verde-principal uppercase text-sm">Jessica Reis</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex flex-col items-center text-center">
@@ -309,6 +309,15 @@
                     <p class="font-bold text-verde-principal uppercase text-sm">Ricardo Mendes</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-700 font-medium mb-4">Agora é sua vez de aproveitar essas oportunidades.</p>
+            <button onclick="document.getElementById('selecao-grupos').scrollIntoView({behavior: 'smooth'})" class="bg-verde-destaque hover:opacity-90 text-white font-black py-4 px-10 rounded-xl transition-all shadow-lg text-lg uppercase tracking-wider">
+                QUERO RECEBER AS PROMOÇÕES
+            </button>
         </div>
     </section>
 
@@ -358,6 +367,35 @@
         function redirectToGroup() {
             if(selectedUrl) window.open(selectedUrl, '_blank');
         }
+
+        // --- SISTEMA DE NOTIFICAÇÕES FLUTUANTES ---
+        const nomesM = ["Lucas Silva", "Gabriel Santos", "Mateus Oliveira", "Pedro Souza", "João Rodrigues", "Rafael Ferreira", "Daniel Alves", "Bruno Lima", "Thiago Gomes", "Felipe Ribeiro", "Rodrigo Martins", "Marcos Carvalho", "André Almeida", "Vitor Lopes", "Gustavo Soares", "Leonardo Barbosa", "Eduardo Vieira", "Diego Machado", "Samuel Rocha", "Caio Nascimento", "Henrique Freitas", "Murilo Pontes", "Vinícius Teixeira", "Arthur Moraes", "Renan Cavalcante", "Igor Moreira", "Douglas Cardoso", "Alexandre Ramos", "Otávio Guimarães", "Wesley Santana", "Marcelo Peixoto", "Renato Castro", "Breno Menezes", "Hugo Aragão", "Danilo Cunha", "Yago Silveira", "Fabrício Bernardes", "Luiz Fernando", "Antônio Carlos", "Roberto Carlos", "Fernando Henrique", "Márcio André", "Francisco Júnior", "Augusto César", "Paulo Ricardo", "César Augusto", "Edson Arantes", "Jorge Ben", "Erick Mota", "William Dutra"];
+        const nomesF = ["Ana Paula", "Maria Eduarda", "Julia Beatriz", "Letícia Costa", "Larissa Souza", "Beatriz Lima", "Fernanda Silva", "Camila Oliveira", "Amanda Rocha", "Bruna Martins", "Mariana Alves", "Gabriela Ferreira", "Aline Santos", "Patrícia Gomes", "Vanessa Ribeiro", "Carolina Carvalho", "Juliana Almeida", "Renata Lopes", "Tatiana Soares", "Priscila Barbosa", "Bianca Vieira", "Carla Machado", "Natália Nascimento", "Débora Freitas", "Lorena Pontes", "Raiane Teixeira", "Isabela Moraes", "Milena Cavalcante", "Sabrina Moreira", "Andressa Cardoso", "Elaine Ramos", "Luciana Guimarães", "Cristiane Santana", "Roberta Peixoto", "Kelly Castro", "Gisele Menezes", "Fabiana Aragão", "Cláudia Cunha", "Talita Silveira", "Daniela Bernardes", "Erica Silva", "Simone Santos", "Mônica Oliveira", "Raquel Rocha", "Viviane Alves", "Adriana Costa", "Michele Lima", "Tais Ferreira", "Thais Martins", "Barbara Santos"];
+        
+        const todosNomes = [...nomesM, ...nomesF];
+        const socialToast = document.getElementById('social-proof-toast');
+        const socialText = document.getElementById('social-proof-text');
+
+        function showNotification() {
+            const nomeAleatorio = todosNomes[Math.floor(Math.random() * todosNomes.length)];
+            const tipo = Math.random() > 0.5;
+            
+            if (tipo) {
+                socialText.innerHTML = `<strong>${nomeAleatorio}</strong> acabou de entrar no Grupo VIP.`;
+            } else {
+                socialText.innerHTML = `<strong>${nomeAleatorio}</strong> entrou em contato sobre um pacote de viagem.`;
+            }
+
+            socialToast.classList.add('show');
+
+            setTimeout(() => {
+                socialToast.classList.remove('show');
+            }, 5000);
+        }
+
+        // Inicia o ciclo de notificações
+        setInterval(showNotification, 12000);
+        setTimeout(showNotification, 3000);
     </script>
 </body>
 </html>
