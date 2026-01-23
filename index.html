@@ -122,12 +122,13 @@
                     <option value="São Paulo - Guarulhos (GRU)">
                     <option value="São Paulo - Congonhas (CGH)">
                     <option value="Campinas - Viracopos (VCP)">
+                    <option value="Rio de Janeiro - Galeão/Santos Dumont (GIG/SDU)">
                 </datalist>
 
                 <p class="text-xs text-gray-500 mt-3 italic flex items-center">
                     <i class="fas fa-info-circle mr-1"></i> Escreva o nome do aeroporto mais próximo para personalizar as ofertas.
                 </p>
-                <button onclick="document.getElementById('selecao-grupos').scrollIntoView({behavior: 'smooth'})" class="w-full mt-6 bg-verde-destaque hover:opacity-90 text-white font-black py-4 rounded-xl transition-all shadow-lg text-lg uppercase tracking-wider">
+                <button onclick="checkInputAndRedirect()" class="w-full mt-6 bg-verde-destaque hover:opacity-90 text-white font-black py-4 rounded-xl transition-all shadow-lg text-lg uppercase tracking-wider">
                     Acessar Grupo VIP no WhatsApp
                 </button>
             </div>
@@ -265,6 +266,9 @@
                     <button onclick="selectCity('cuiabá', 'https://chat.whatsapp.com/H9ek3vgzNjs1nWtncqhXBo')" class="city-option p-4 rounded-xl border-2 border-gray-200 bg-white font-bold text-gray-700 hover:border-azul-institucional transition-all flex items-center justify-center">
                         <i class="fas fa-map-marker-alt mr-2 text-azul-institucional"></i> Cuiabá e Sinop
                     </button>
+                    <button onclick="selectCity('rio de janeiro', 'https://chat.whatsapp.com/J0lDBJ3docT12dAtfgShoJ')" class="city-option p-4 rounded-xl border-2 border-gray-200 bg-white font-bold text-gray-700 hover:border-azul-institucional transition-all flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt mr-2 text-azul-institucional"></i> Rio de Janeiro
+                    </button>
                 </div>
                 <button id="final-cta" onclick="redirectToGroup()" disabled class="w-full bg-gray-300 text-white font-black py-5 px-8 rounded-2xl text-xl shadow-lg cursor-not-allowed transition-all uppercase flex items-center justify-center space-x-2">
                     <i class="fab fa-whatsapp text-2xl"></i>
@@ -354,6 +358,35 @@
         }
 
         let selectedUrl = "";
+
+        const linksCidades = {
+            "cuiaba": "https://chat.whatsapp.com/H9ek3vgzNjs1nWtncqhXBo",
+            "sinop": "https://chat.whatsapp.com/H9ek3vgzNjs1nWtncqhXBo",
+            "brasilia": "https://chat.whatsapp.com/DFwubGTwOoC2L9SXwJeZi2",
+            "sao paulo": "https://chat.whatsapp.com/BwWXawnGJaJ27Yyztb9fSH",
+            "rio de janeiro": "https://chat.whatsapp.com/J0lDBJ3docT12dAtfgShoJ",
+            "rio": "https://chat.whatsapp.com/J0lDBJ3docT12dAtfgShoJ"
+        };
+
+        function checkInputAndRedirect() {
+            const rawInput = document.getElementById('cidade').value.toLowerCase();
+            // Remove acentos para facilitar a busca
+            const input = rawInput.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            let found = false;
+
+            for (const key in linksCidades) {
+                if (input.includes(key)) {
+                    window.open(linksCidades[key], '_blank');
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                document.getElementById('selecao-grupos').scrollIntoView({behavior: 'smooth'});
+            }
+        }
+
         function selectCity(name, url) {
             selectedUrl = url;
             document.querySelectorAll('.city-option').forEach(el => el.classList.remove('selected'));
@@ -368,7 +401,6 @@
             if(selectedUrl) window.open(selectedUrl, '_blank');
         }
 
-        // --- SISTEMA DE NOTIFICAÇÕES FLUTUANTES ---
         const nomesM = ["Lucas Silva", "Gabriel Santos", "Mateus Oliveira", "Pedro Souza", "João Rodrigues", "Rafael Ferreira", "Daniel Alves", "Bruno Lima", "Thiago Gomes", "Felipe Ribeiro", "Rodrigo Martins", "Marcos Carvalho", "André Almeida", "Vitor Lopes", "Gustavo Soares", "Leonardo Barbosa", "Eduardo Vieira", "Diego Machado", "Samuel Rocha", "Caio Nascimento", "Henrique Freitas", "Murilo Pontes", "Vinícius Teixeira", "Arthur Moraes", "Renan Cavalcante", "Igor Moreira", "Douglas Cardoso", "Alexandre Ramos", "Otávio Guimarães", "Wesley Santana", "Marcelo Peixoto", "Renato Castro", "Breno Menezes", "Hugo Aragão", "Danilo Cunha", "Yago Silveira", "Fabrício Bernardes", "Luiz Fernando", "Antônio Carlos", "Roberto Carlos", "Fernando Henrique", "Márcio André", "Francisco Júnior", "Augusto César", "Paulo Ricardo", "César Augusto", "Edson Arantes", "Jorge Ben", "Erick Mota", "William Dutra"];
         const nomesF = ["Ana Paula", "Maria Eduarda", "Julia Beatriz", "Letícia Costa", "Larissa Souza", "Beatriz Lima", "Fernanda Silva", "Camila Oliveira", "Amanda Rocha", "Bruna Martins", "Mariana Alves", "Gabriela Ferreira", "Aline Santos", "Patrícia Gomes", "Vanessa Ribeiro", "Carolina Carvalho", "Juliana Almeida", "Renata Lopes", "Tatiana Soares", "Priscila Barbosa", "Bianca Vieira", "Carla Machado", "Natália Nascimento", "Débora Freitas", "Lorena Pontes", "Raiane Teixeira", "Isabela Moraes", "Milena Cavalcante", "Sabrina Moreira", "Andressa Cardoso", "Elaine Ramos", "Luciana Guimarães", "Cristiane Santana", "Roberta Peixoto", "Kelly Castro", "Gisele Menezes", "Fabiana Aragão", "Cláudia Cunha", "Talita Silveira", "Daniela Bernardes", "Erica Silva", "Simone Santos", "Mônica Oliveira", "Raquel Rocha", "Viviane Alves", "Adriana Costa", "Michele Lima", "Tais Ferreira", "Thais Martins", "Barbara Santos"];
         
@@ -393,7 +425,6 @@
             }, 5000);
         }
 
-        // Inicia o ciclo de notificações
         setInterval(showNotification, 12000);
         setTimeout(showNotification, 3000);
     </script>
